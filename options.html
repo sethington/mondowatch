@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>MondoTees</title>
+    <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }
+
+      img {
+        margin: 5px;
+        border: 1px solid #d3d3d3;
+        border-radius:3px;
+        vertical-align: middle;
+        width: 75px;
+        height: 75px;
+      }
+      div.save{
+        padding-top:10px;
+      }
+      div.save button{
+        font-size:14px;
+      }
+    </style>
+    <script src='jquery-2.1.1.min.js'></script>
+    <script src='options.js'></script>
+  </head>
+  <body>
+    <div><img src='mondo.png'/>Options</div>
+    
+    <form id="options">
+      <input type="checkbox" name="isActivated" checked>
+      Check Mondo every
+      <select name="frequency" id="notificationFreq">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+        <option>25</option>
+        <option>30</option>
+      </select>
+      minute(s).
+
+      <div class='save'>
+        <button id="saveOptions">Save</button>
+      </div>
+    </form>
+  </body>
+</html>
+

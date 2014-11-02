@@ -1,0 +1,36 @@
+{
+	"manifest_version": 2,
+	"name": "Mondo Watch",
+	"description": "Monitor Mondo On Sales and Check out Quickly",
+	"version": "1.0",
+	"permissions": [
+		"notifications",
+		"tabs",
+		"http://mondotees.com/"
+	],
+	"options_page": "options.html",
+	"background": {
+		"scripts":[
+			"jquery-2.1.1.min.js",
+			"background.js"
+		]
+	},
+	"browser_action":{
+		"default_icon": "mondo.png",
+		"default_popup": "popup.html"
+	},
+	"web_accessible_resources":[
+		"mondo.png"
+	],
+	"content_scripts":[
+		{
+			"matches": [
+				"http://mondotees.com/*",
+				"http://mondotees.com/",
+				"http://*.mondotees.com/",
+				"https://checkout.shopify.com/*"
+			],
+			"js": ["jquery-2.1.1.min.js", "mondobuy.js"]
+		}
+	]
+}
