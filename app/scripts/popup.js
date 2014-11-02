@@ -1,3 +1,5 @@
+"use strict";
+
 var loadItems = function(){
 	if (localStorage.currentItems){
 		var items = [];
@@ -8,7 +10,7 @@ var loadItems = function(){
 		catch(e){
 		}
 
-		var html = ""; 
+		var html = "";
 
 		$(items).each(function(i,item){
 			html += "<div class='mondo-item'>";
@@ -27,8 +29,8 @@ var loadItems = function(){
 
 		$("div.content").html(html);
 
-		$("button", "div.content").click(function(elem){
-			var id = $(this).attr('data-id');
+		$("button", "div.content").click(function(){
+			var id = $(this).attr("data-id");
 			console.log("buy",id);
 
 			var msg = {
@@ -54,6 +56,6 @@ var loadItems = function(){
 	}
 };
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
 	loadItems();
 });

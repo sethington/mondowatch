@@ -1,0 +1,32 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/chrome\/mondo\/app\/styles\/popup\.scss}line{font-family:\000032}}
+body {
+  min-width: 357px;
+  overflow-x: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/chrome\/mondo\/app\/styles\/popup\.scss}line{font-family:\000037}}
+img {
+  margin: 2px 5px 5px 5px;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  vertical-align: middle;
+  width: 75px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/chrome\/mondo\/app\/styles\/popup\.scss}line{font-family:\0000315}}
+.mondo-item img {
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/chrome\/mondo\/app\/styles\/popup\.scss}line{font-family:\0000319}}
+.mondo-item button {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/sites\/chrome\/mondo\/app\/styles\/popup\.scss}line{font-family:\0000326}}
+.mondo-item {
+  padding-bottom: 10px;
+}

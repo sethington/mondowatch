@@ -1,11 +1,4 @@
-// listen for messages coming from popup.html
-chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-        if (request.type === "BUY"){
-        	buyItem(request.id);
-        }
-	}
-);
+"use strict";
 
 // mondo buy item click
 var buyItem = function(itemId){
@@ -37,10 +30,10 @@ var shopifyCheckout = function(){
 	// wait for checkout.shopify to load. if login button is present, click it
 	if (jQuery("div#email").find(".active-customer").length === 0){
 		console.log("forwarding to login");
-		window.location.href = jQuery("#customer-login-link").attr('href');
+		window.location.href = jQuery("#customer-login-link").attr("href");
 	}
 	else{
-		var firstAddr = jQuery("#billing_address_selector option:first").attr('value');
+		var firstAddr = jQuery("#billing_address_selector option:first").attr("value");
 		jQuery("#billing_address_selector").val(firstAddr);
 		jQuery("#commit-button").click();
 	}
@@ -64,3 +57,12 @@ else if (window.location.href.match(/mondotees\.com.*account\/login\//)){
 	// we werent logged in and have been dumped back to mondo to login.
 	mondoLogin();
 }
+
+// listen for messages coming from popup.html
+chrome.runtime.onMessage.addListener(
+	function(request) {
+		if (request.type === "BUY"){
+			buyItem(request.id);
+		}
+	}
+);

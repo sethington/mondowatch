@@ -1,0 +1,28 @@
+
+body {
+	min-width: 357px;
+	overflow-x: hidden;
+}
+
+img {
+	margin: 2px 5px 5px 5px;
+	border: 1px solid #d3d3d3;
+	border-radius:3px;
+	vertical-align: middle;
+	width: 75px;
+}
+
+.mondo-item img{
+	float:left;
+}
+
+.mondo-item button{
+	margin-top:10px;
+	margin-left:20px;
+	font-size:13px;
+	cursor:pointer;
+}
+
+.mondo-item{
+	padding-bottom:10px;
+}
